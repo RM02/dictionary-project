@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DictionaryServiceService } from 'src/app/dictionary-service.service';
 
 @Component({
@@ -8,18 +8,23 @@ import { DictionaryServiceService } from 'src/app/dictionary-service.service';
 })
 export class SearchComponent implements OnInit {
 
-  word:string = '';
+  word:string = 'Alba';
 
   model: any;
+
+  @Output() searchEvent = new EventEmitter<any>();
 
   constructor(private Api: DictionaryServiceService) {}
 
   ngOnInit(): void {
+    this.sendWord()
+    this.word = ''
   }
 
   sendWord() {
     this.Api.getWord(this.word)
     .subscribe((data:any) => {
+      this.searchEvent.emit(data);
       this.model = data
     })
   }

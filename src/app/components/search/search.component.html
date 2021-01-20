@@ -15,15 +15,3 @@
     </div>
   </form>
 </div>
-
-<div>
-  <mat-card *ngFor="let element of model" class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ element.meaning }}</mat-card-title>
-      <mat-card-subtitle>Traducción al inglés</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{element.img_url}}">
-  </mat-card>  
-
-</div>
