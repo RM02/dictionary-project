@@ -18,14 +18,14 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "docs/dictionaryApp",
-            "index": "src/index.html",
-            "main": "src/main.ts",
-            "polyfills": "src/polyfills.ts",
+            "index": "docs/dictionaryApp/index.html",
+            "main": "docs/dictionaryApp/main.ts",
+            "polyfills": "docs/dictionaryApp/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "docs/dictionaryApp/favicon.ico",
+              "docs/dictionaryApp/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
