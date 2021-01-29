@@ -17,6 +17,7 @@ export class SearchComponent {
   sendWord() {
     this.router.navigate([''], {
       queryParams: {
+        format: 'json',
         word: this.word
       }
     })
