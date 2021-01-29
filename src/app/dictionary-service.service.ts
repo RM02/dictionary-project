@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DictionaryServiceService {
   
-  url:string = 'http://eratosthenes.pythonanywhere.com/definition'
+  url:string = 'https://dictionary-service.herokuapp.com/dictionary-api/definition'
 
   constructor(private http: HttpClient) { }
   
@@ -16,7 +16,7 @@ export class DictionaryServiceService {
 
   getWord(value:string) {
   	return this.http.get(this.url, {
-  		params: { word: value }
+  		params: { format: 'json', word: value.toUpperCase() }
   	})
   }
 }
