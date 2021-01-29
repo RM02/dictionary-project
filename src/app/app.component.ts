@@ -5,12 +5,9 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
 
-  title = 'dictionaryApp';
-  data: any;
+  constructor() { }
 
-  showResults(data:any) {
-  	this.data = data
-  }
 }

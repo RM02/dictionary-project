@@ -6,7 +6,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class DictionaryServiceService {
   
-  url:string = 'http://eratosthenes.pythonanywhere.com/dictionary-api/definition'
+  url:string = 'http://eratosthenes.pythonanywhere.com/definition'
 
   constructor(private http: HttpClient) { }
   
