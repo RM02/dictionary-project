@@ -15,8 +15,11 @@ export class DictionaryServiceService {
   })
 
   getWord(value:string) {
+    if (value) {
+      value.toUpperCase()
+    }
   	return this.http.get(this.url, {
-  		params: { format: 'json', word: value.toUpperCase() }
+  		params: { format: 'json', word: value }
   	})
   }
 }
