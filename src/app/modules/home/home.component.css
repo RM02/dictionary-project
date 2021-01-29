@@ -1,14 +1,9 @@
   h1 {
     color: #F9A825;
-    margin: 8px 0;
   }
 
   p {
     margin: 0;
-  }
-
-  .text {
-    color: #f4f4f4;
   }
 
   svg.material-icons {
@@ -72,12 +67,14 @@
   a,
   a:visited,
   a:hover {
-    color: #1976d2;
+    color: #3F51B5;
+    font-size: 20PX;
+    padding: 10px;
     text-decoration: none;
   }
 
   a:hover {
-    color: #125699;
+    color: #B0BEC5;
   }
 
   .terminal {
