@@ -17,7 +17,7 @@ export class SearchComponent {
   sendWord() {
     this.router.navigate([''], {
       queryParams: {
-        word: this.word
+        word: this.word.toUpperCase()
       }
     })
   }
