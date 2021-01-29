@@ -27,8 +27,16 @@ export class HomeComponent implements OnInit {
   getData(key:string) {
     this.Api.getWord(key)
     .subscribe((data:any) => {
-       this.model = data['data']
-       this.list_of_word = data['list']
+      if (data['data']) {
+        this.model = data['data']
+        this.list_of_word = data['list']
+      } else {
+        this.Api.getWord(key)
+        .subscribe((data:any) => {
+          this.model = data['data']
+          this.list_of_word = data['list']
+        })
+      }
     })
   }
 
