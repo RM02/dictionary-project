@@ -1,7 +1,7 @@
-  h1 {
-    color: #F9A825;
-  }
-
+ .layout-container {
+  padding-top: 25%;
+  height: 50vh
+ }
   p {
     margin: 0;
   }

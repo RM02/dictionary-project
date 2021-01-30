@@ -1,0 +1,12 @@
+<mat-card  fxLayout="column" fxLayoutAlign="space-around center">
+	<div fxFlex>
+	  	<h2>Ver también</h2>
+	</div>
+	<div  fxLayout="column" fxLayoutAlign="space-between center" fxFlex="50%" fxFlex.gt-sm="25%" fxHide.md class="word-link">
+		<div>
+		  	<a *ngFor="let word of data" href="results/?word={{word.word}}">
+		  	{{ word.word }}
+		  </a>
+		</div>
+	</div>
+</mat-card>

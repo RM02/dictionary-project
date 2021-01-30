@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DictionaryServiceService } from 'src/app/dictionary-service.service';
 
 @Component({
@@ -10,38 +10,25 @@ import { DictionaryServiceService } from 'src/app/dictionary-service.service';
 
 export class HomeComponent implements OnInit {
 
+  activated:boolean;
+  loading: boolean;
   model:any[] = [];
-
   list_of_word: any = [];
 
-  constructor(private route: ActivatedRoute, private Api: DictionaryServiceService) { }
-
-  ngOnInit() {
-  	this.route.queryParams
-  	.subscribe(params => {
-      this.getData(params['word'])
-
-    })
+  constructor(private router: Router, private Api: DictionaryServiceService) {
+    this.activated = true
+    this.loading = false
   }
 
-  getData(key:string) {
-    this.Api.getWord(key)
-    .subscribe((data:any) => {
-      if (data['data'].length > 0) {
-        this.model = data['data']
-        this.list_of_word = data['list']
-      } else {
-        this.Api.getWord(key)
-        .subscribe((data:any) => {
-          this.model = data['data']
-          this.list_of_word = data['list']
-        })
-      }
-    })
-  }
+  ngOnInit() {}
 
   showResults(data:any) {
-  	this.model = data
+    this.loading = true
+    setTimeout(() => {
+      this.model = data
+      this.loading = false
+    }, 2000)
+    this.router.navigate(['results'])
   }
 
 }

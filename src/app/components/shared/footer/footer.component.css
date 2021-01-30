@@ -1,0 +1,20 @@
+
+.twitter {
+	padding: 10px;
+	border-radius: 1.5em;
+	background-color: #448AFF
+}
+.whatsapp {
+	padding: 10px;
+	border-radius: 1.5em;
+	background-color: #388E3C
+}
+.facebook {
+	padding: 10px;
+	border-radius: 1.5em;
+	background-color: #FFF
+}
+a {
+	height: 20px;
+	width: 20px;
+}

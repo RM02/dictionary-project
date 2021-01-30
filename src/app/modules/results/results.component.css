@@ -1,0 +1,33 @@
+  .layout-container {
+    padding: 50px
+  }
+  .layout-content {
+    padding: 50px
+  }
+  h1 {
+  	color: #FF5722;
+    padding: 20px;
+    text-align: center;
+  }
+   .example-margin {
+    margin: 100px auto;
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #F9A825;
+    font-size: 20PX;
+    padding: 10px;
+    text-decoration: none;
+  }
+   svg#clouds {
+    position: fixed;
+    bottom: -180px;
+    left: -230px;
+    z-index: -10;
+    width: 1920px;
+  }
+  .back-btn {
+    padding-top: 40px;
+  }

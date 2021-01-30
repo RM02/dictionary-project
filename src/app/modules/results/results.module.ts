@@ -1,25 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { FormsModule } from '@angular/forms';
 
+import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { HomeComponent } from './home.component';
+import { ResultsComponent } from './results.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 
 @NgModule({
   declarations: [
-  	HomeComponent
-  ],
+  	ResultsComponent],
   imports: [
     CommonModule,
+    MatCardModule,
     MatButtonModule,
     MatIconModule,
     FlexLayoutModule,
-    ComponentsModule
+    ComponentsModule,
+    MatProgressSpinnerModule
   ]
 })
-export class HomeModule { }
+export class ResultsModule { }
