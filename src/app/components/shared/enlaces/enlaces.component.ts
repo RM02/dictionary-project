@@ -11,8 +11,6 @@ export class EnlacesComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  
-  }
+  ngOnInit(): void {}
 
 }
