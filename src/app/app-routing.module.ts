@@ -11,7 +11,8 @@ const routes: Routes = [
 	},
 	{
 		path: 'results',
-		component: ResultsComponent
+		component: ResultsComponent,
+		children: []
 	}
 ];
 

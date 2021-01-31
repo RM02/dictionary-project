@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-enlaces',
@@ -9,7 +10,7 @@ export class EnlacesComponent implements OnInit {
   
   @Input() data:any[] = []
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {}
 
