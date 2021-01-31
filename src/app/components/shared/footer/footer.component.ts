@@ -13,7 +13,7 @@ export class FooterComponent implements OnInit {
   constructor(private router: Router, private active: ActivatedRoute) { }
 
   ngOnInit(): void {
-  	this.url = 'https://rm02.github.io/dictionary-project' + this.router.url
+  	this.url = 'https://dictionary-online-app.herokuapp.com' + this.router.url
   }
 
 }
